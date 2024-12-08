@@ -13,6 +13,12 @@ import static cs112.lab09.Constants.*;
 public class RedSummer extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(RedSummer.class.getResource("map-view.fxml"));
+//        Scene scene = new Scene(fxmlLoader.load());
+
+//        FXMLLoader fxmlLoader = new FXMLLoader(RedSummer.class.getResource("CityView.fxml"));
+//        Scene scene = new Scene(fxmlLoader.load());
+
         FXMLLoader fxmlLoader = new FXMLLoader(RedSummer.class.getResource(MAIN_VIEW_RESOURCE));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

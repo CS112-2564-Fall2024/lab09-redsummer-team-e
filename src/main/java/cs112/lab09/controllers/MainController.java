@@ -4,6 +4,8 @@ import cs112.lab09.RedSummer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,9 +30,19 @@ public class MainController {
     @FXML
     ImageView imageView;
 
+    @FXML
+    private Button startButton;
 
-    public void handleStartButton() {
+    @FXML
+    public void handleStartButton(ActionEvent actionEvent) throws IOException {
+        Parent mapView = FXMLLoader.load(RedSummer.class.getResource("map-view.fxml"));
+        Scene mapViewScene = new Scene(mapView);
 
+        Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+        window.setScene(mapViewScene);
+
+        window.show();
     }
 
     public void handleExitButton() {

@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.MapController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.MapController">
    <children>
-      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="593.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="27.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleDetailSF" text="Details" />
-      <Button layoutX="154.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleDetailBB" text="Details" />
-      <Button layoutX="531.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Red-Summer.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="sanFranciscoCAButton" layoutY="163.0" mnemonicParsing="false" onAction="#onSanFranciscoCAButtonClick" text="San Francisco&#10;California">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
    </children>
-</AnchorPane>
+</Pane>
